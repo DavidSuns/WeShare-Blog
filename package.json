@@ -1,0 +1,5 @@
+{
+	"name": "WeShare",
+	"descripation" : "WeShare is a blog website.",
+	"dependencies" : {"express" : "4.11.1"}
+}
