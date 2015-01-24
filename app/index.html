@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="WeShare">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="none">
+	<meta name="author" content="David Sun">
+	<meta name="description" content="blog">
+
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+
+	<style type="text/css">
+		.navbar-default .navbar-brand {
+			color: black;
+			font-size: 23px;
+			font-weight: 600;
+			font-family: Georgia, serif;
+			padding-right: 30px;
+			margin-bottom: 0px;
+			padding-top: 25px;
+		}
+
+		nav.navbar-default {
+			background-color: #ffffff;
+			border-width: 2px; 
+		}
+
+		.navbar-nav > li {
+			font-size: 15px;
+			padding-left: 8px;
+			padding-top: 10px;
+		}
+
+		div.navbar-form {
+			padding-right:38px; 
+		}
+
+		div.navbar-form > button{
+			font-size: 15px;
+			font-weight: 400;
+			color:#777;
+			padding: 9px 13px;
+			margin: 4px 0px 0px 8px; 
+			-moz-border-radius: 15px;
+    		-webkit-border-radius: 15px;
+    		border-radius:20px;
+		}
+
+		.articles-container {
+			width: 85%;
+		}
+
+		.show-more {
+			width: 100%;
+			text-align: center;
+		}
+		.show-more button{
+			color: #777;
+			border-radius: 20px;
+		}
+
+		.footer-style {
+			width:85%;
+			color:#777;
+			margin:auto;
+			margin-top: 50px; 
+			border-top: 1px solid #E5E5E5 ; 
+		}
+
+		footer a {
+			color: #E5E5E5;
+			font-size: 12px;
+			margin: 5px 3px 20px 5px;
+			padding-top: 4px;
+		}
+
+		footer a:hover,
+		footer a:active {
+			color: #aaa;
+		}
+	</style>	
+	<title>We Share</title>
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<p class="navbar-brand">We Share</p>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="">精选</a></li>
+			<li><a href="">文化</a></li>
+			<li><a href="">幽默</a></li>
+			<li><a href="">科技</a></li>
+			<li><a href="">设计</a></li>
+		</ul>
+		<div class="nav navbar-form navbar-right">
+			<button class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-search"></span></button>
+			<button class="btn btn-default navbar-btn">Write a story</button>
+			<button class="btn btn-default navbar-btn">Sign in/ Sign out</button>
+		</div>
+	</nav>
+	<main class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="articles-container">
+
+				</div>
+				<div class="show-more">
+					<button class="btn btn-default">Show more<span class="glyphicon glyphicon-chevron-right"></span></button>
+				</div>
+				<footer class="footer-style">
+					<a href="">Help</a>
+					<a href="">Careers</a>
+					<a href="">Blog</a>
+					<a href="">Privacy</a>
+					<a href="">Learns</a>
+					<a href="">About</a>
+				</footer>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</main>
+	<script type="text/javascript" src="scripts/vendor/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="scripts/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="script/angular-1.2.20/angular.min.js">
+</body>
+</html>
