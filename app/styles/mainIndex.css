@@ -1,0 +1,119 @@
+		.navbar-default .navbar-brand {
+			color: black;
+			font-size: 23px;
+			font-weight: 600;
+			font-family: Georgia, serif;
+			padding-right: 30px;
+			margin-bottom: 0px;
+			padding-top: 25px;
+		}
+
+		nav.navbar-default {
+			background-color: #ffffff;
+			border-width: 2px; 
+		}
+
+		.navbar-nav > li {
+			font-size: 15px;
+			padding-left: 8px;
+			padding-top: 10px;
+		}
+
+		div.navbar-form {
+			padding-right:38px; 
+		}
+
+		div.navbar-form > button{
+			font-size: 15px;
+			font-weight: 400;
+			color:#777;
+			padding: 9px 13px;
+			margin: 4px 0px 0px 8px; 
+			-moz-border-radius: 15px;
+    		-webkit-border-radius: 15px;
+    		border-radius:20px;
+		}
+
+		.articles-container {
+			width: 95%;
+		}
+
+		.show-more {
+			width: 100%;
+			text-align: center;
+		}
+		.show-more button{
+			color: #777;
+			border-radius: 20px;
+		}
+
+		.footer-style {
+			width:85%;
+			color:#777;
+			margin:auto;
+			margin-top: 50px; 
+			border-top: 1px solid #E5E5E5 ; 
+			margin-bottom: 50px;
+		}
+
+		footer a {
+			color: #E5E5E5;
+			font-size: 12px;
+			margin: 5px 3px 20px 5px;
+			padding-top: 4px;
+		}
+
+		footer a:hover,
+		footer a:active {
+			color: #aaa;
+		}
+
+			.article-title {
+		font-weight: 700;
+		font-size: 24px;
+		color: black;
+	}
+
+	.article-brief {
+		font-size: 18px;
+		color: #777;
+		display: block;
+		line-height: 1.4
+	}
+
+	.article-content {
+		margin: 3px 160px 0px 0px;
+		display: block;
+	}
+
+	.article-picture {
+		float:right;
+		width: 140px;
+		height:120px;
+		padding-top: 14px;
+	}
+
+	.article-userInfo {
+		margin-top: 10px;
+		display: inline-block;
+	}
+
+	.userInfo-logo{
+		display: table-cell;
+		width: 40px;
+		height: 40px;
+	}
+
+	.userInfo-content{
+		display: table-cell;
+		padding-left: 10px;
+		line-height: 1.4;
+		font-size: 14px;
+		vertical-align: middle;
+	}
+
+	.userInfo-logo img {
+		display: block;
+		width: 40px;
+		height: 40px;
+	}
