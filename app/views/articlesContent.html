@@ -1,0 +1,18 @@
+<div ng-controller="articlesController">
+	<div ng-repeat="article in articles">
+		<img src="img/articles/{{article.photo}}" class="article-picture">
+		<div class="article-content">
+			<a class="article-title">{{article.title}}</a>
+			<p class="article-brief">{{article.brief}}</p>
+			<div class="article-userInfo">
+			<div class="userInfo-logo">
+				<img src="img/user/{{article.authorphoto}}">
+			</div>
+			<div class="userInfo-content">	
+				<a href="/views/{{article.userKey}}">{{article.userName}}</a>
+				<p>{{article.date}}</p>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
