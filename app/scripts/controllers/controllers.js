@@ -71,3 +71,33 @@ app.controller("articlesController", ["$scope", function($scope, $routeParams) {
 	$scope.articles = articles;
 
 }]);
+
+app.controller("hotArticlesController",["$scope", function($scope){
+	$scope.hotArticles = [
+						{
+							title: "Holy Shit, I Interviewed the President",
+							authorName: "Hank Green",
+							index: 1
+						},
+						{
+							title: "Age 40: Ain’t Nobody Got Time For That",
+							authorName: "Amanda Clayman",
+							index: 2
+						},
+						{
+							title: "Eleven Ways to Surprise People with Your Ou",
+							authorName: "Britton MDG",
+							index: 3
+						},
+						{
+							title: "Tech’s High Barrier to Entry for the Underpri",
+							authorName: "Gerard O'Neill",
+							index: 4
+						},
+						{
+							title: "I was forced into a long distance relationshi",
+							authorName: "Jeremy Schoenherr",
+							index: 5
+						}
+					];
+}]);
