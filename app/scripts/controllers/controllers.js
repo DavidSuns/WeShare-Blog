@@ -66,8 +66,8 @@ app.controller("navController", ["$scope", function($scope) {
 					];
 }]);
 
-app.controller("articlesController", ["$scope", function($scope, $routeParams) {
-
+app.controller("articlesController", ["$scope", "http", function($scope, $routeParams, $http) {
+	
 	$scope.articles = articles;
 
 }]);
