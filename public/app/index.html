@@ -12,6 +12,8 @@
 	<script type="text/javascript" src="scripts/vendor/angular-1.2.20/angular.min.js"></script>
 	<script type="text/javascript" src="scripts/vendor/angular-1.2.20/angular-route.min.js"></script>
 	<script type="text/javascript" src="scripts/controllers/controllers.js"></script>
+	<style type="text/css">
+	</style>
 	<title>We Share</title>
 </head>
 <body>
@@ -44,7 +46,25 @@
 					<a href="">About</a>
 				</footer>
 			</div>
-			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="aside-guide" ng-controller="hotArticlesController">
+					<nav>
+						<a href="" class="left-link">TOP STORIES ON WESHARE</a>
+						<a href="" class="right-link">SEE MORE</a>
+					</nav>
+					<ul>
+						<li ng-repeat="hotArticle in hotArticles" class="list-item">
+							<div class="index-area">
+								<p>{{hotArticle.index}}</p>
+							</div>
+							<div class="list-itemInfo">
+								<a href="" class="list-itemTitle">{{hotArticle.title}}</a>
+								<a href="" class="link-darken">{{hotArticle.authorName}}</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</main>
 	<script type="text/javascript" src="scripts/vendor/jquery-2.1.1.js"></script>
