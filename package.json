@@ -1,5 +1,11 @@
 {
 	"name": "WeShare",
 	"descripation" : "WeShare is a blog website.",
-	"dependencies" : {"express" : "4.11.1"}
+	"dependencies" : {
+		"express" : "4.11.1",
+		"body-parser" : "1.11.0",
+		"mysql" : "2.5.4",
+		"mocha" : "2.1.0"
+	}
 }
+
