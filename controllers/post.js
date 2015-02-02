@@ -1,5 +1,5 @@
 // var bodyParser = require]
-var post  = require("../model/post.js").Post();
+var postModel  = require("../model/post.js").Post();
 var Post = function(){
 
 };
@@ -21,15 +21,28 @@ Post.prototype.add = function(req, res){
 		author: req.body.author
 	};
 
-	post.add(data, function(err, result) {
+	postModel.add(data, function(err, result) {
 		if(err) {
 			console.log("/post/add insert error");
 			res.end();
 			return;
 		}
 		// console.log(result);
-		res.send(JSON.stringify(post.setSuccess("")));
+		res.send(JSON.stringify(postModel.setSuccess("insert successful" ,result)));
 		res.end();
+	});
+};
+
+Post.prototype.getAll = function(req, res) {
+	var data = null;
+	
+	postModel.get(data, function(err, result) {
+		if(err) {
+			console.log("Error happen when get all post from db");
+			res.end();
+			return;
+		}
+		res.send("get all posts", result);
 	});
 };
 

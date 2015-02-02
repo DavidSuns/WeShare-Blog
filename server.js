@@ -1,9 +1,9 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 // var Post = require("./controllers/post");
-var table = require("./router").table;
+var routeTable = require("./router").routeTable;
 var app = express();
-var port = parseInt(process.env.PORT, 10) || 8080;
+var port = parseInt(process.env.PORT, 10) || 8000;
 
 // console.log(post);
 // var post = Post.post();
@@ -19,9 +19,16 @@ var port = parseInt(process.env.PORT, 10) || 8080;
 // app.get("/post", function(req,res){
 // 	post.add(req, res);
 // });
-for(var route in table) {
-	app.post(route, function(req, res) {
-		table[route](req, res);
-	});
+var routeInfo = {};
+for(var i = 0; i < routeTable.length; i++) {
+	routeInfo = routeTable[i];
+	switch (routeInfo.action) {
+		case "POST" : 
+			app.post(routeInfo.route, routeInfo.controller)
+		case "GET" :
+			app.get(routeInfo.route, routeInfo.controller); 
+		default:
+			break;
+	}
 }
 app.listen(port);

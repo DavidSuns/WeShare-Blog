@@ -7,14 +7,14 @@ function Base() {
 
         host: "localhost",
         user: "root",
-        password: "13899538180sz",
+        password: "123456",
         database: "weshare"
     });
 
     this.db.connect();
 
     this.table = "";
-    this.relationship = {};
+    // this.relationship = {};
 
 }
 
@@ -33,7 +33,7 @@ Base.prototype.setSuccess = function (message, data) {
 
 Base.prototype.setFailed = function (message, data) {
 
-    if (data == undefined) {
+    if (data === undefined) {
         data = {};
     }
 
