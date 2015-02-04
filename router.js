@@ -1,5 +1,5 @@
 var post = require("./controllers/post").post();
-var user = require("./controllers/user").user();
+// var user = require("./controllers/user").user();
 
 var routeTable = [
 		{
@@ -18,20 +18,25 @@ var routeTable = [
 			"action" : "GET"
 		},
 		{
-			"route" : "/users",
-			"controller" : user.add,
-			"action" : "POST"
-		},
-		{
-			"route" : "/users",
-			"controller" : user.getAll,
-			"action" : "GET"
-		},
-		{
-			"route" : "/users/:id",
-			"controller" : user.get,
-			"action" : "GET"
-		},
+			"route" : "/posts/:id",
+			"controller" : post.delete,
+			"action" : "DELETE"
+		}
+		// {
+		// 	"route" : "/users",
+		// 	"controller" : user.add,
+		// 	"action" : "POST"
+		// },
+		// {
+		// 	"route" : "/users",
+		// 	"controller" : user.getAll,
+		// 	"action" : "GET"
+		// },
+		// {
+		// 	"route" : "/users/:id",
+		// 	"controller" : user.get,
+		// 	"action" : "GET"
+		// },
 	];
 
 module.exports.routeTable = routeTable;

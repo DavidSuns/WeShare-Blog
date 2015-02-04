@@ -14,7 +14,7 @@ Post.getInstance = function() {
 }
 
 Post.prototype.add = function(req, res){
-	// console.log(req.body);
+	console.log(req.body);
 	var data = {
 		title : req.body.title,
 		content : req.body.content,
@@ -28,7 +28,7 @@ Post.prototype.add = function(req, res){
 			return;
 		}
 		// console.log(result);
-		res.send(JSON.stringify(postModel.setSuccess("insert successful" ,result)));
+		res.send(JSON.stringify(postModel.setSuccess("insert successful" ,result.message)));
 		res.end();
 	});
 };
@@ -42,7 +42,37 @@ Post.prototype.getAll = function(req, res) {
 			res.end();
 			return;
 		}
-		res.send("get all posts", result);
+		console.log(result);
+		res.send(JSON.stringify(postModel.setSuccess("get all successful" ,result)));
+		res.end();
+	});
+};
+
+Post.prototype.get = function(req, res) {
+	var id = req.params.id;
+
+	postModel.get(id, function(err, result) {
+		if(err) {
+			console.log("Error happen when get post from post table by id.");
+			res.end();
+			return;
+		} 
+		res.send(JSON.stringify(postModel.setSuccess("get successful by id" ,result)));
+		res.end();
+	});
+};
+
+Post.prototype.delete = function(req, res) {
+	var id = req.params.id;
+
+	postModel.delete(id, function(err, result) {
+		if(err) {
+			console.log("Error happen when delete post from post table by id.");
+			res.end();
+			return;
+		} 
+		res.send(JSON.stringify(postModel.setSuccess("delete successful" ,result)));
+		res.end();
 	});
 };
 

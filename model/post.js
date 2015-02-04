@@ -23,10 +23,8 @@ Post.prototype.add = function (data, callback) {
 
     console.log("/model/Post.js/add");
 
-    var query = this.db.query('INSERT INTO post SET ?', [data], function (err, result) {
-
-    	 typeof callback == "function" && callback(err, result);
-
+    this.db.query('INSERT INTO post SET ?', [data], function (err, result) {
+    	 typeof callback == "function" && callback(err, result.message);
     });
 
     console.log(query.sql);
@@ -34,15 +32,32 @@ Post.prototype.add = function (data, callback) {
 
 Post.prototype.get = function(data, callback) {
     console.log("/model/Post.js/get");
+    var query = "";
 
-    var result;
-    var query = this.db.query('SELECT * FROM post', [null], function(err, result) {
+    if(data) {
+        query = "SELECT * FROM post WHERE post_id=" + data;   
+    } else {
+        query = 'SELECT * FROM post';
+    }
+
+    this.db.query(query, function(err, rows) {
         if(err) {
             console.log("error happens when get data from db");
+            return;
         }
-        result = result;
+        typeof callback == "function" && callback(err, rows);
     });
-    return result;
+};
+
+Post.prototype.delete = function(data, callback) {
+    var query = "DELETE FROM post WHERE post_id=" + data;
+    this.db.query(query, function(err, result) {
+        if(err) {
+            console.log("error happends when delete data from db");
+            return;
+        } 
+        typeof callback == "function" && callback(err, result);
+    });
 };
 
 module.exports.Post = function () {

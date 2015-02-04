@@ -24,9 +24,14 @@ for(var i = 0; i < routeTable.length; i++) {
 	routeInfo = routeTable[i];
 	switch (routeInfo.action) {
 		case "POST" : 
-			app.post(routeInfo.route, routeInfo.controller)
+			app.post(routeInfo.route, routeInfo.controller);
+			break;
 		case "GET" :
-			app.get(routeInfo.route, routeInfo.controller); 
+			app.get(routeInfo.route, routeInfo.controller);
+			break; 
+		case "DELETE" : 
+			app.delete(routeInfo.route, routeInfo.controller);
+			break;
 		default:
 			break;
 	}
